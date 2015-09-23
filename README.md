@@ -1,5 +1,6 @@
-Forward-path implementation of [AlexNet](http://www.cs.toronto.edu/~fritz/absps/imagenet.pdf).
-This straight-forward Matlab implementation doesn't rely on any 3rd-party library.
+This is a forward-path implementation of the CNN [AlexNet](http://www.cs.toronto.edu/~fritz/absps/imagenet.pdf).
+Starting in the ILSVRC 2012 competition, Convolutional Neural Networks (CNNs) are the state-of-the-art algorithm for image classification and detection.
+The straight-forward Matlab implementation of this CNN's forward path doesn't rely on any 3rd-party library.
 
 ## Detect images
 In your Matlab console, type
@@ -7,6 +8,14 @@ In your Matlab console, type
 alexNetForward
 ```
 This will run AlexNet in forward path to detect a cat.
+
+## Understanding Forward Propagation
+There are lots of highly optimized deep learning tools out there, like Berkeley's [Caffe](caffe.berkeleyvision.org), [Torch](torch.ch) or
+Alex Krizhevsky's [cuda-convnet2](https://github.com/akrizhevsky/cuda-convnet2). Those tools will help you train and test your CNNs at high speed.
+However if you are new to deep learning, those tools won't help you much to understand the forward path of a CNN.
+
+The goal of this project is to show you how forward-propagation works exactly in a quick and easy-to-understand way.
+
 
 ## Implementation details
 The network is implemented as in the [Caffe](http://caffe.berkeleyvision.org/)
