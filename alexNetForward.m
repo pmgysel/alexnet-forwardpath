@@ -5,9 +5,12 @@ disp 'Weights: Choose *.mat file with AlexNet weights.'
 disp 'Please make sure you extract those weights through Matcaffe from the Model Zoo'
 disp 'More about Matcaffe: http://caffe.berkeleyvision.org/tutorial/interfaces.html'
 disp 'More about the Model Zoo: http://caffe.berkeleyvision.org/model_zoo.html'
-[FileName,PathName,FilterIndex] = uigetfile('./*.mat','Select the network weights')
-if(FileName ~= 0 && ~findstr(FileName,'.mat').isempty)
+[FileName,PathName,FilterIndex] = uigetfile('./*.mat','Select the network weights');
+if(~isempty(strfind(FileName,'.mat')))
 	netParams=load(strcat(PathName,FileName));
+    disp 'Running AlexNet in forward path ...'
+else
+    error('Invalid weights selected')
 end
 conv1Kernels=netParams.weights(1).weights{1};
 conv1Bias=netParams.weights(1).weights{2};

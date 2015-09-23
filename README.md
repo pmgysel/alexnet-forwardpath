@@ -4,7 +4,7 @@ This straight-forward Matlab implementation doesn't rely on any 3rd-party librar
 ## Detect images
 In your Matlab console, type
 ```
-execute alexNetForward.m.
+alexNetForward
 ```
 This will run AlexNet in forward path to detect a cat.
 
@@ -17,7 +17,7 @@ width W x height H x channels N matrices. All network parameters are stored in 4
 
 ## Network parameters from Matcaffe
 The network parameters are not included in this repository. Before running, please make sure you
-download the parameters from Caffe's [Model Zoo](https://github.com/BVLC/caffe/tree/master/models/bvlc_reference_caffenet).
+download the pretrained model from Caffe's [Model Zoo](https://github.com/BVLC/caffe/tree/master/models/bvlc_reference_caffenet).
 Instructions of the Caffe installation can be found [here](http://caffe.berkeleyvision.org/installation.html).
 More information about Caffe's Matlab wrapper is here: [Matcaffe](http://caffe.berkeleyvision.org/tutorial/interfaces.html).
 Once you downloaded the trained weights (bvlc_reference_caffenet.caffemodel) from the Model Zoo, use Matcaffe to extract the weights
@@ -37,5 +37,5 @@ When you run AlexNet in forward path, you will be prompted to select the file wi
 ## Citing
 Please kindly cite this forward implementation of AlexNet if it helps your research:
 ```
-Mohammad Motamedi, Philipp Gysel, Venkatesh Akella and Soheil Ghiasi, “Design Space Exploration of FPGA-Based Deep Convolutional Neural Network”, IEEE/ACM Asia-South Pacific Design Automation Conference (ASPDAC),  January 2016.
+Mohammad Motamedi, Philipp Gysel, Venkatesh Akella and Soheil Ghiasi, “Design Space Exploration of FPGA-Based Deep Convolutional Neural Network”, IEEE/ACM Asia-South Pacific Design Automation Conference (ASPDAC), January 2016.
 ```
