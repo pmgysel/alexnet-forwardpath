@@ -6,7 +6,7 @@
 %(same w/h coordinates).
 %Formula:
 %top_xy_i=bottom_xy_i/(k+alpha/localSize*sum_i(bottom_xy_i^2))^beta.
-%The padding pixels to the edge input feature map consist of zeros.
+%The padding pixels consist of zeros.
 function [ top ] = lrn( bottom, localSize, alpha, beta, k )
     [W,H,N]=size(bottom);
     top=zeros(W,H,N);

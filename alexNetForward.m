@@ -1,4 +1,4 @@
-%Forward Implementation of AlexNet
+%Forward path implementation of AlexNet
 clear all;
 %Load network parameters.
 disp 'Weights: Choose *.mat file with AlexNet weights.'
@@ -37,8 +37,8 @@ tic;
 conv1=conv(data, conv1Kernels, conv1Bias, 11, 4, 0, 1);
 relu1=relu(conv1);
 pool1=maxpool(relu1,3,2);
-norm1=lrn(pool1,5,.0001,0.75,1);
-conv2=conv(norm1, conv2Kernels, conv2Bias, 5, 1, 2, 2);
+lrn1=lrn(pool1,5,.0001,0.75,1);
+conv2=conv(lrn1, conv2Kernels, conv2Bias, 5, 1, 2, 2);
 relu2=relu(conv2);
 pool2=maxpool(relu2,3,2);
 norm2=lrn(pool2,5,.0001,0.75,1); 
@@ -51,14 +51,14 @@ relu5=relu(conv5);
 pool5=maxpool(relu5,3,2);
 %flatten data from 3d to 1d
 pool5=reshape(pool5, [9216,1]);
-fc6=dense(pool5,fc6Weights,fc6Bias);
+fc6=fc(pool5,fc6Weights,fc6Bias);
 relu6=relu(fc6);
 dropout6=dropout(relu6);
-fc7=dense(dropout6,fc7Weights,fc7Bias);
+fc7=fc(dropout6,fc7Weights,fc7Bias);
 relu7=relu(fc7);
 dropout7=dropout(relu7);
-fc8=dense(dropout7,fc8Weights,fc8Bias);
-prob=softmax(fc8); % OK, overall (whole CNN) max abs error: 3.2783e-07
+fc8=fc(dropout7,fc8Weights,fc8Bias);
+prob=softmax(fc8);
 toc;
 
 displayPrediction(prob);

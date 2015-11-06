@@ -1,5 +1,6 @@
 %Display the predicted image category.
-%prob is a 1d vector with the probabilities for each image category.
+%prob is a 1d vector (numOfPredictions x 1) with the probabilities for each
+%image category.
 function [ ] = displayPrediction( prob )
 	prediction=find(prob==max(prob));
     fid=fopen('ressources/synset_words.txt');

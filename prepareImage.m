@@ -1,4 +1,4 @@
-%Return a prepared image that serves as input to AlexNet.
+%Return an image that serves as input to AlexNet.
 %fileName is the path to the image file.
 %preprocessed_image is a 3d matrix with dimensions 227x227x3.
 %preprocessed_image is WxHxC major in BGR.

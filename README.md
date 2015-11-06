@@ -16,6 +16,9 @@ However if you are new to deep learning, those tools won't help you much to unde
 
 The goal of this project is to show you how forward-propagation works exactly in a quick and easy-to-understand way.
 
+Every CNN is a concatenation of different layers. For more details about the different layers of AlexNet, please refer to my
+[post](http://lepsucd.com/?p=522) on our research group's web page.
+
 
 ## Implementation details
 The network is implemented as in the [Caffe](http://caffe.berkeleyvision.org/)
