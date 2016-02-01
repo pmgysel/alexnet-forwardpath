@@ -2,13 +2,11 @@
 clear all;
 %Load network parameters.
 disp 'Weights: Choose *.mat file with AlexNet weights.'
-disp 'Please make sure you extract those weights through Matcaffe from the Model Zoo'
-disp 'More about Matcaffe: http://caffe.berkeleyvision.org/tutorial/interfaces.html'
-disp 'More about the Model Zoo: http://caffe.berkeleyvision.org/model_zoo.html'
+disp 'The trained network weights can be downloaded from https://drive.google.com/file/d/0B-VdpVMYRh-pQWV1RWt5NHNQNnc/view.'
 [FileName,PathName,FilterIndex] = uigetfile('./*.mat','Select the network weights');
 if(~isempty(strfind(FileName,'.mat')))
 	netParams=load(strcat(PathName,FileName));
-    disp 'Running AlexNet in forward path ...'
+    disp 'Running AlexNet in forward path. This will take about half a minute ...'
 else
     error('Invalid weights selected')
 end
