@@ -32,7 +32,7 @@ The network parameters are not included in this repository. Before running, plea
 have the parameters of the trained network available. You can 
 download the pretrained model from Caffe's [Model Zoo](https://github.com/BVLC/caffe/tree/master/models/bvlc_reference_caffenet) and use [Matcaffe](http://caffe.berkeleyvision.org/tutorial/interfaces.html)
 to extract the network weights 
-as *.mat file. Alternatively, you can download the weights [here](https://drive.google.com/file/d/0B-VdpVMYRh-pQWV1RWt5NHNQNnc/view).
+as *.mat file. Alternatively, you can download the weights [here](https://drive.google.com/file/d/0B-VdpVMYRh-pQWV1RWt5NHNQNnc/view?usp=sharing&resourcekey=0-f3YY9O4FBDnrk71zoGdjug).
 When you run AlexNet in forward path, you will be prompted to select the MAT-file with those weights.
 
 ## Resource Files
